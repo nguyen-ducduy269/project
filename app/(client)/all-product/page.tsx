@@ -16,7 +16,7 @@ const Collections = dynamic(
 const Shop = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [changePage, setChangePage] = useState(1);
-  const item = `users?_page=${changePage}&_limit=20`;
+  const item = `users`;
   const title = "All Plants";
 
   return (

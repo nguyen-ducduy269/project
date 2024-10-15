@@ -12,8 +12,8 @@ import { SlArrowRight } from "react-icons/sl";
 import { BsChevronDoubleLeft } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
-import { MdCircle, MdOutlineFilterAlt } from "react-icons/md";
-import { IoCloseSharp } from "react-icons/io5";
+import { MdCircle, MdOutlineDone } from "react-icons/md";
+import { IoCloseSharp, IoOptionsOutline } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 import { BsChevronDoubleRight } from "react-icons/bs";
 
@@ -32,6 +32,13 @@ interface Props {
   changePage: number;
 }
 
+const list = [
+  { name: "Featured", filter: "?feature=true" },
+  { name: "Newest", filter: "?newest=true" },
+  { name: "Highest Ratings", filter: "?highest_rate=true" },
+  { name: "Lowest Ratings", filter: "?lowest_rate=true" },
+];
+
 const Collections = (props: Props) => {
   const [openQuickShopPopUp, setOpenQuickShopPopUp] = useState(false);
   const [openChooseOptionPopUp, setOpenChooseOptionPopUp] = useState(false);
@@ -40,6 +47,8 @@ const Collections = (props: Props) => {
   const [changeQuickShopPopUpImg, setChangeQuickShopPopUpImg] = useState(0);
   const [changePot, setChangePot] = useState<number>(0);
   const [quantity, setQuantity] = useState<number>(1);
+  const [display, setDisplay] = useState(false); ///// ẩn hiện menu filter sản phẩm
+  const [openIndex, setOpenIndex] = useState(0); ///// lựa chọn loại filter
 
   const fetchData = async (url: string) => {
     const response = await fetch(url);
@@ -48,7 +57,9 @@ const Collections = (props: Props) => {
   };
 
   useEffect(() => {
-    fetchData(`http://localhost:4001/${props.item}`);
+    fetchData(
+      `http://localhost:4001/${props.item}?_page=${props.changePage}&_limit=20`
+    );
   }, [props.changePage]);
 
   const rateStar = (params: number) => {
@@ -190,7 +201,39 @@ const Collections = (props: Props) => {
               <Link href={"/"}>Home</Link> <SlArrowRight /> {props.title}
             </div>
 
-            <h1>{props.title}</h1>
+            <div className="head">
+              <h1>{props.title}</h1>
+
+              <button className="menu" onClick={() => setDisplay(true)}>
+                <IoOptionsOutline />
+              </button>
+            </div>
+
+            {display ? (
+              <div className="drop-down">
+                <h3>Sort by</h3>
+                <ul onClick={() => setDisplay(false)}>
+                  {list.map((item: any, index: number) => {
+                    return (
+                      <li
+                        key={index}
+                        onClick={() => {
+                          setOpenIndex(index);
+                          fetchData(
+                            `http://localhost:4001/${props.item}${item.filter}`
+                          );
+                        }}
+                      >
+                        {item.name}{" "}
+                        {openIndex == index ? <MdOutlineDone /> : ""}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ) : (
+              ""
+            )}
 
             <div className="all-product">
               {allProduct?.map((item: any, index: number) => {

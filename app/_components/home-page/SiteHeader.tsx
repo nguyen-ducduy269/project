@@ -21,6 +21,10 @@ interface Props {
 const SiteHeader = (props: Props) => {
   const [display, setDisplay] = useState(false);
   const [cardNumber, setCardNumber] = useState([]);
+  const [filterData, setFilterData] = useState([]);
+  const [filterName, setFilterName] = useState<string>("");
+  const [filter, setFilter] = useState<object>();
+  const [open, setOpen] = useState(false);
 
   const fetchData = async (url: string) => {
     const response = await fetch(url);
@@ -28,9 +32,36 @@ const SiteHeader = (props: Props) => {
     setCardNumber(users);
   };
 
+  const fetchData1 = async (url: string) => {
+    const response = await fetch(url);
+    const users = await response.json();
+    setFilterData(users);
+  };
+
   useEffect(() => {
     fetchData("http://localhost:4001/card");
+    fetchData1("http://localhost:4001/users");
   }, [props.selectedItem]);
+
+  const Search = () => {
+    setOpen(true);
+    if (!filterName) return;
+    const filter = filterName.toLowerCase();
+    const filterValue = filterData.filter((person: any) => {
+      return person.infor.toLowerCase().includes(filter);
+    });
+    console.log(filterValue);
+    setFilter(filterValue);
+  };
+
+  const value = filter ? Object.values(filter) : [];
+
+  const truncateString = (str: string, maxLength: number) => {
+    if (str.length > maxLength) {
+      return str.slice(0, maxLength) + "...";
+    }
+    return str;
+  };
 
   return (
     <>
@@ -42,8 +73,14 @@ const SiteHeader = (props: Props) => {
             </Link>
 
             <div className="site-input">
-              <input type="text" placeholder="What are you looking for?" />
-              <Button type="primary">
+              <input
+                type="text"
+                value={filterName}
+                onChange={(e: any) => setFilterName(e.target.value)}
+                id="searchInput"
+                placeholder="What are you looking for?"
+              />
+              <Button type="primary" onClick={() => Search()}>
                 <CiSearch />
               </Button>
             </div>
@@ -56,6 +93,45 @@ const SiteHeader = (props: Props) => {
               </div>
             </Link>
           </div>
+
+          {open == true ? (
+            <div className="filter-list">
+              <table>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+                {value?.map((item: any, index: number) => {
+                  return (
+                    <tr key={index}>
+                      <td>{truncateString(item?.infor, 30)}</td>
+                      <td>{item?.title}</td>
+                      <td>${item?.price}</td>
+                      <td>
+                        <Link
+                          href="/product"
+                          onClick={() => {
+                            localStorage.setItem(
+                              "detail-products",
+                              JSON.stringify(item)
+                            );
+                            setOpen(false);
+                            window.location.reload();
+                          }}
+                        >
+                          See details
+                        </Link>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </table>
+            </div>
+          ) : (
+            ""
+          )}
 
           <div className="site-main">
             <div className="site-page">

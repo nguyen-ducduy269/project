@@ -384,7 +384,7 @@
       "main_image": "https://houseplantshop.com/cdn/shop/products/4_PILEA_CRINKLE_1_869x869.jpg?v=1627692780",
       "title": "C.D.",
       "ticked": true,
-      "rate": 5,
+      "rate": 2,
       "description": "My little Crinkle arrived safely all the way from Florida and is enjoying its new home! Came wrapped well, early, no damage, and very healthy. Thank you!",
       "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/files/3_PILEA_CRINKLE_TEMP_2.23.24_x100.jpg?v=1709308172",
       "infor": "Pilea 'Crinkle'",
@@ -3587,19 +3587,7 @@
       ]
     }
   ],
-  "card": [
-    {
-      "id": 27,
-      "name": "Monstera Adansonii 'Swiss Cheese'",
-      "image": "https://houseplantshop.com/cdn/shop/products/image_png_1350410938_445x445.png?v=1643765015",
-      "size": "8' Pot",
-      "price": 20.99,
-      "ca": 0,
-      "fl": 5,
-      "quantity": 4,
-      "total_price": 83.96
-    }
-  ],
+  "card": [],
   "holiday_plant": [
     {
       "id": "holiday_plant_1",
@@ -3607,6 +3595,10 @@
       "rate": 5,
       "name": "Zamioculcas Zamiifolia 'ZZ'",
       "price": 14.99,
+      "feature": true,
+      "newest": false,
+      "highest_rate": true,
+      "lowest_rate": false,
       "detail_image": [
         {
           "big_image": "https://houseplantshop.com/cdn/shop/products/1-Zamioculcas-Zamiifolia-6_869x869.jpg?v=1622836272",
@@ -3652,6 +3644,10 @@
       "rate": 5,
       "name": "Snake Plant 'Zeylanica'",
       "price": 14.99,
+      "feature": false,
+      "newest": true,
+      "highest_rate": true,
+      "lowest_rate": false,
       "detail_image": [
         {
           "big_image": "https://houseplantshop.com/cdn/shop/products/1-Zamioculcas-Zamiifolia-6_869x869.jpg?v=1622836272",
@@ -3697,6 +3693,10 @@
       "rate": 5,
       "name": "Snake Plant 'Laurentii'",
       "price": 14.99,
+      "feature": false,
+      "newest": false,
+      "highest_rate": true,
+      "lowest_rate": false,
       "detail_image": [
         {
           "big_image": "https://houseplantshop.com/cdn/shop/products/1-Zamioculcas-Zamiifolia-6_869x869.jpg?v=1622836272",
@@ -3739,9 +3739,13 @@
     {
       "id": "holiday_plant_4",
       "main_image": "https://houseplantshop.com/cdn/shop/products/14e0c2ed-af52-4cc4-84fb-7bf9f29ec041_295x295.png?v=1654628539",
-      "rate": 5,
+      "rate": 1,
       "name": "ZZ Zamioculcas 'Black Queen'",
       "price": 14.99,
+      "feature": false,
+      "newest": false,
+      "highest_rate": false,
+      "lowest_rate": true,
       "detail_image": [
         {
           "big_image": "https://houseplantshop.com/cdn/shop/products/1-Zamioculcas-Zamiifolia-6_869x869.jpg?v=1622836272",
@@ -3784,9 +3788,13 @@
     {
       "id": "holiday_plant_1",
       "main_image": "https://houseplantshop.com/cdn/shop/products/1-Zamioculcas-Zamiifolia-6_295x295.jpg?v=1622836272",
-      "rate": 5,
+      "rate": 2,
       "name": "Zamioculcas Zamiifolia 'ZZ'",
       "price": 14.99,
+      "feature": false,
+      "newest": true,
+      "highest_rate": false,
+      "lowest_rate": true,
       "detail_image": [
         {
           "big_image": "https://houseplantshop.com/cdn/shop/products/1-Zamioculcas-Zamiifolia-6_869x869.jpg?v=1622836272",
@@ -3832,6 +3840,10 @@
       "rate": 5,
       "name": "Snake Plant 'Zeylanica'",
       "price": 14.99,
+      "feature": true,
+      "newest": false,
+      "highest_rate": true,
+      "lowest_rate": false,
       "detail_image": [
         {
           "big_image": "https://houseplantshop.com/cdn/shop/products/1-Zamioculcas-Zamiifolia-6_869x869.jpg?v=1622836272",
@@ -3874,9 +3886,13 @@
     {
       "id": "holiday_plant_3",
       "main_image": "https://houseplantshop.com/cdn/shop/products/4_SNAKE_LAURENTII_1_295x295.jpg?v=1627941536",
-      "rate": 5,
+      "rate": 4,
       "name": "Snake Plant 'Laurentii'",
       "price": 14.99,
+      "feature": false,
+      "newest": true,
+      "highest_rate": true,
+      "lowest_rate": false,
       "detail_image": [
         {
           "big_image": "https://houseplantshop.com/cdn/shop/products/1-Zamioculcas-Zamiifolia-6_869x869.jpg?v=1622836272",
@@ -3922,6 +3938,10 @@
       "rate": 5,
       "name": "ZZ Zamioculcas 'Black Queen'",
       "price": 14.99,
+      "feature": true,
+      "newest": false,
+      "highest_rate": false,
+      "lowest_rate": false,
       "detail_image": [
         {
           "big_image": "https://houseplantshop.com/cdn/shop/products/1-Zamioculcas-Zamiifolia-6_869x869.jpg?v=1622836272",

@@ -8,6 +8,7 @@ export const CollectionsStyle = styled.div`
 
     .collections {
       width: 100%;
+      height: auto;
       .title {
         display: flex;
         align-items: center;
@@ -22,9 +23,45 @@ export const CollectionsStyle = styled.div`
         }
       }
 
-      h1 {
-        font-size: 38px;
-        margin: 20px 0px 20px 0px;
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        h1 {
+          font-size: 38px;
+          margin: 20px 0px 20px 0px;
+        }
+
+        .menu {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: unset;
+          border-radius: 8px;
+          svg {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .drop-down {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        padding: 20px;
+        right: 5%;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+        top: 53%;
+        ul {
+          li {
+            cursor: pointer;
+          }
+        }
       }
 
       .all-product {
@@ -435,6 +472,25 @@ export const CollectionsStyle = styled.div`
       .collections {
         width: 100%;
         padding: 0px 10px 0px 10px;
+        .drop-down {
+          width: 286px;
+          height: auto;
+          padding: 10px;
+          right: 4%;
+          background-color: white;
+          border: 1px solid black;
+          border-radius: 10px;
+          top: 60%;
+          h3 {
+            font-size: 14px;
+          }
+          ul {
+            li {
+              font-size: 12px;
+            }
+          }
+        }
+
         .all-product {
           grid-template-columns: repeat(1, 1fr);
           .product-item {
@@ -952,6 +1008,25 @@ export const CollectionsStyle = styled.div`
       .collections {
         width: 100%;
         padding: 0px 10px 0px 10px;
+        .drop-down {
+          width: 286px;
+          height: auto;
+          padding: 20px;
+          right: 4%;
+          background-color: white;
+          border: 1px solid black;
+          border-radius: 10px;
+          top: 60%;
+          h3 {
+            font-size: 18px;
+          }
+          ul {
+            li {
+              font-size: 14px;
+            }
+          }
+        }
+
         .all-product {
           grid-template-columns: repeat(2, 1fr);
           .product-item {
@@ -1391,6 +1466,25 @@ export const CollectionsStyle = styled.div`
       .collections {
         width: 100%;
         padding: 0px 10px 0px 10px;
+
+        .drop-down {
+          width: 300px;
+          height: auto;
+          padding: 20px;
+          right: 4%;
+          background-color: white;
+          border: 1px solid black;
+          border-radius: 10px;
+          top: 53%;
+          h3 {
+            font-size: 20px;
+          }
+          ul {
+            li {
+              font-size: 16px;
+            }
+          }
+        }
 
         .all-product {
           grid-template-columns: repeat(5, 1fr);

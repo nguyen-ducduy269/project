@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Site = styled.div`
   height: 127px;
   background-color: #00644b;
+  position: relative;
   .site-header-main {
     width: 100%;
     display: flex;
@@ -92,6 +93,32 @@ export const Site = styled.div`
       font-weight: 600;
       color: gray;
       text-decoration: unset;
+    }
+  }
+
+  .filter-list {
+    position: fixed;
+    left: 22.5%;
+    right: 0;
+    top: 26%;
+    width: 64.5%;
+    background-color: white;
+    height: fit-content;
+    z-index: 1000;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 10px;
+    overflow-y: auto;
+    table {
+      width: 100%;
+      tr {
+        th,
+        td {
+          width: 25%;
+          height: 30px;
+          text-align: center;
+        }
+      }
     }
   }
 
