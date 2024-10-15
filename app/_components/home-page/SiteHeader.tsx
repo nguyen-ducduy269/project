@@ -118,7 +118,6 @@ const SiteHeader = (props: Props) => {
                               JSON.stringify(item)
                             );
                             setOpen(false);
-                            window.location.reload();
                           }}
                         >
                           See details
@@ -164,8 +163,14 @@ const SiteHeader = (props: Props) => {
             </div>
 
             <div className="response-search">
-              <input type="text" placeholder="What are you looking for?" />
-              <Button type="primary">
+              <input
+                type="text"
+                value={filterName}
+                onChange={(e: any) => setFilterName(e.target.value)}
+                id="searchInput"
+                placeholder="What are you looking for?"
+              />
+              <Button type="primary" onClick={() => Search()}>
                 <CiSearch />
               </Button>
             </div>

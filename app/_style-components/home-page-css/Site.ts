@@ -135,6 +135,19 @@ export const Site = styled.div`
       display: none;
     }
 
+    .filter-list {
+      width: 94%;
+      left: 3%;
+      table {
+        tr {
+          th,
+          td {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
     .site-main {
       display: none;
     }
@@ -369,6 +382,19 @@ export const Site = styled.div`
       }
     }
 
+    .filter-list {
+      width: 53%;
+      left: 31%;
+      table {
+        tr {
+          th,
+          td {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
     .site-main {
       display: block;
       position: relative;
@@ -468,6 +494,19 @@ export const Site = styled.div`
       }
     }
 
+    .filter-list {
+      width: 66%;
+      left: 22%;
+      table {
+        tr {
+          th,
+          td {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
     .site-main {
       display: block;
       position: relative;
@@ -562,6 +601,21 @@ export const Site = styled.div`
             align-items: center;
             justify-content: center;
             font-size: 10px;
+          }
+        }
+      }
+    }
+
+    .filter-list {
+      left: 22.5%;
+      right: 0;
+      top: 26%;
+      width: 64.5%;
+      table {
+        tr {
+          th,
+          td {
+            font-size: 18px;
           }
         }
       }
