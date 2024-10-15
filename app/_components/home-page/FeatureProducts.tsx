@@ -85,7 +85,7 @@ const FeatureProducts = (props: Props) => {
           body: JSON.stringify(product),
         });
         setCardValue(1);
-        alert("Product named " + product.name + " has been added to the cart");
+        alert("Product has been added to the cart");
       } else {
         const updatedProduct = {
           ...existingProduct,
@@ -100,6 +100,7 @@ const FeatureProducts = (props: Props) => {
           body: JSON.stringify(updatedProduct),
         });
 
+        setCardValue(1);
         alert("Product already exists, updated quantity!");
       }
     } catch (error) {
