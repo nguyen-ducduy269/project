@@ -156,12 +156,14 @@ const DetailProduct = (props: Props) => {
         });
 
         alert("Product already exists, updated quantity!");
+        setQuantity(1);
       } else {
         props.setSelectedItem(Math.random());
 
         try {
           axios.post("http://localhost:4001/card", productAddToCard);
           alert("Successfull add product to your card! Continue Shopping?");
+          setQuantity(1);
         } catch (postError) {
           console.error("Failed to add product:", postError);
           alert("Failed to add product to cart. Please try again.");

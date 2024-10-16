@@ -3587,7 +3587,19 @@
       ]
     }
   ],
-  "card": [],
+  "card": [
+    {
+      "id": 1,
+      "name": "Pothos 'Neon'",
+      "image": "https://houseplantshop.com/cdn/shop/files/1-Pothos-Neon-6_592x592.jpg?v=1687233535",
+      "size": "3' Pot",
+      "price": 13.99,
+      "ca": 0,
+      "fl": 43,
+      "quantity": 4,
+      "total_price": 55.96
+    }
+  ],
   "holiday_plant": [
     {
       "id": "holiday_plant_1",
