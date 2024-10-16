@@ -85,7 +85,7 @@ const FeatureProducts = (props: Props) => {
           body: JSON.stringify(product),
         });
         setCardValue(1);
-        alert("Product has been added to the cart");
+        alert("Product has been added to the card");
       } else {
         const updatedProduct = {
           ...existingProduct,

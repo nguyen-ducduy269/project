@@ -9234,8 +9234,173 @@
       "name": "Zamioculcas Zamiifolia 'ZZ'"
     }
   ],
-  "order": [],
-  "general_warehouse1": [],
-  "general_warehouse2": [],
-  "shipper": []
+  "order": [
+    {
+      "firstName": "Duy",
+      "lastName": "Nguyen Duc",
+      "email": "abc@gmail.com",
+      "phoneNumber": "9871234568",
+      "addressText": "455",
+      "apartment": "123",
+      "ward": "cdf",
+      "place": "Hà Giang",
+      "items": [
+        {
+          "id": 4,
+          "name": "Philodendron 'Brasil'",
+          "image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_BRASIL_1_869x869.jpg?v=1627692675",
+          "size": "3' Pot",
+          "price": 13.99,
+          "ca": 0,
+          "fl": 23,
+          "quantity": 4,
+          "total_price": 55.96
+        }
+      ],
+      "changePercent": 0,
+      "timeOrder": "16/10/2024 09:47",
+      "route": [
+        {
+          "state": true,
+          "p_state": "The store has confirmed your order!",
+          "aother_state": "Your order has been packaged",
+          "timeOrder": "16/10/2024 09:48",
+          "id": 1
+        },
+        {
+          "id": 2,
+          "state": true,
+          "p_state": "The first generalware house has confirmed your order!",
+          "aother_state": "Your order has been packaged",
+          "timeOrder": "16/10/2024 09:49"
+        },
+        {
+          "id": 3,
+          "state": true,
+          "p_state": "The second generalware house has confirmed your order!",
+          "aother_state": "Your order has been packaged",
+          "timeOrder": "16/10/2024 09:49"
+        },
+        {
+          "id": 4,
+          "state": true,
+          "p_state": "You confirm receipt of order!",
+          "aother_state": "The shipper has delivered the order to you.",
+          "timeOrder": "16/10/2024 09:50"
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "general_warehouse1": [
+    {
+      "firstName": "Duy",
+      "lastName": "Nguyen Duc",
+      "email": "abc@gmail.com",
+      "phoneNumber": "9871234568",
+      "addressText": "455",
+      "apartment": "123",
+      "ward": "cdf",
+      "place": "Hà Giang",
+      "items": [
+        {
+          "id": 4,
+          "name": "Philodendron 'Brasil'",
+          "image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_BRASIL_1_869x869.jpg?v=1627692675",
+          "size": "3' Pot",
+          "price": 13.99,
+          "ca": 0,
+          "fl": 23,
+          "quantity": 4,
+          "total_price": 55.96
+        }
+      ],
+      "changePercent": 0,
+      "timeOrder": "16/10/2024 09:47",
+      "route": [
+        {
+          "state": false,
+          "p_state": "Wait for the store has confirmed your order!",
+          "aother_state": "",
+          "timeOrder": "16/10/2024 09:47",
+          "id": 1
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "general_warehouse2": [
+    {
+      "firstName": "Duy",
+      "lastName": "Nguyen Duc",
+      "email": "abc@gmail.com",
+      "phoneNumber": "9871234568",
+      "addressText": "455",
+      "apartment": "123",
+      "ward": "cdf",
+      "place": "Hà Giang",
+      "items": [
+        {
+          "id": 4,
+          "name": "Philodendron 'Brasil'",
+          "image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_BRASIL_1_869x869.jpg?v=1627692675",
+          "size": "3' Pot",
+          "price": 13.99,
+          "ca": 0,
+          "fl": 23,
+          "quantity": 4,
+          "total_price": 55.96
+        }
+      ],
+      "changePercent": 0,
+      "timeOrder": "16/10/2024 09:47",
+      "route": [
+        {
+          "state": false,
+          "p_state": "Wait for the store has confirmed your order!",
+          "aother_state": "",
+          "timeOrder": "16/10/2024 09:47",
+          "id": 1
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "shipper": [
+    {
+      "firstName": "Duy",
+      "lastName": "Nguyen Duc",
+      "email": "abc@gmail.com",
+      "phoneNumber": "9871234568",
+      "addressText": "455",
+      "apartment": "123",
+      "ward": "cdf",
+      "place": "Hà Giang",
+      "items": [
+        {
+          "id": 4,
+          "name": "Philodendron 'Brasil'",
+          "image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_BRASIL_1_869x869.jpg?v=1627692675",
+          "size": "3' Pot",
+          "price": 13.99,
+          "ca": 0,
+          "fl": 23,
+          "quantity": 4,
+          "total_price": 55.96
+        }
+      ],
+      "changePercent": 0,
+      "timeOrder": "16/10/2024 09:47",
+      "route": [
+        {
+          "state": false,
+          "p_state": "Wait for the store has confirmed your order!",
+          "aother_state": "",
+          "timeOrder": "16/10/2024 09:47",
+          "id": 1
+        }
+      ],
+      "id": 1
+    }
+  ]
 }

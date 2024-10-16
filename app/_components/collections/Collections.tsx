@@ -518,7 +518,7 @@ const Collections = (props: Props) => {
                               setOpenQuickShopPopUp(false);
                             }}
                           >
-                            Add to Cart
+                            Add to Card
                           </button>
 
                           <button
@@ -685,7 +685,7 @@ const Collections = (props: Props) => {
                           setOpenChooseOptionPopUp(false);
                         }}
                       >
-                        Add to Cart
+                        Add to Card
                       </button>
 
                       <button
