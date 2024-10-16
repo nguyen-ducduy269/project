@@ -171,12 +171,14 @@ const Collections = (props: Props) => {
         });
 
         alert("Product already exists, updated quantity!");
+        setQuantity(1);
       } else {
         props.setSelectedItem(Math.random());
 
         try {
           axios.post("http://localhost:4001/card", productAddToCard);
           alert("Successfull add product to your card! Continue Shopping?");
+          setQuantity(1);
         } catch (postError) {
           console.error("Failed to add product:", postError);
           alert("Failed to add product to cart. Please try again.");
@@ -437,12 +439,24 @@ const Collections = (props: Props) => {
                           name="quantity"
                           id=""
                           min={1}
-                          placeholder="1"
                           value={quantity}
-                          onChange={(e: any) =>
-                            setQuantity(Number(e.target.value))
-                          }
                         />
+                        {quantity <= 1 ? (
+                          <button className="minus">-</button>
+                        ) : (
+                          <button
+                            className="plus"
+                            onClick={() => setQuantity(Number(quantity - 1))}
+                          >
+                            -
+                          </button>
+                        )}
+                        <button
+                          className="plus"
+                          onClick={() => setQuantity(Number(quantity + 1))}
+                        >
+                          +
+                        </button>
                       </form>
 
                       {popUpInfor?.sold_out == true ? (
@@ -589,16 +603,30 @@ const Collections = (props: Props) => {
                   )}
 
                   <form action="">
-                    <label htmlFor="">Quantity</label>
                     <input
                       type="number"
                       name=""
                       id=""
                       min={1}
-                      placeholder="1"
                       value={quantity}
-                      onChange={(e: any) => setQuantity(Number(e.target.value))}
                     />
+
+                    {quantity <= 1 ? (
+                      <button className="minus">-</button>
+                    ) : (
+                      <button
+                        className="plus"
+                        onClick={() => setQuantity(Number(quantity - 1))}
+                      >
+                        -
+                      </button>
+                    )}
+                    <button
+                      className="plus"
+                      onClick={() => setQuantity(Number(quantity + 1))}
+                    >
+                      +
+                    </button>
                   </form>
 
                   {popUpInfor?.sold_out == true ? (

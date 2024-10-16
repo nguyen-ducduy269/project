@@ -296,8 +296,31 @@ export const CollectionsStyle = styled.div`
                 margin-bottom: 20px;
                 input {
                   height: 100%;
+                  width: 70%;
                   padding-left: 10px;
                   font-size: 16px;
+                }
+
+                .minus {
+                  width: 40px;
+                  height: 40px;
+                  background-color: rgb(209, 213, 219);
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  font-size: 20px;
+                  cursor: pointer;
+                }
+
+                .plus {
+                  width: 40px;
+                  height: 40px;
+                  background-color: #5d6b82;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  font-size: 20px;
+                  cursor: pointer;
                 }
               }
             }
@@ -406,6 +429,28 @@ export const CollectionsStyle = styled.div`
               height: 100%;
               padding-left: 10px;
               font-size: 16px;
+            }
+
+            .minus {
+              width: 40px;
+              height: 40px;
+              background-color: rgb(209, 213, 219);
+              color: white;
+              border: none;
+              border-radius: 5px;
+              font-size: 20px;
+              cursor: pointer;
+            }
+
+            .plus {
+              width: 40px;
+              height: 40px;
+              background-color: #5d6b82;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              font-size: 20px;
+              cursor: pointer;
             }
           }
 
