@@ -151,15 +151,23 @@ const FeatureProducts = (props: Props) => {
 
             <div className="form-field-select">
               <label htmlFor="">Quantity</label>
-              <input
-                type="number"
-                name=""
-                id=""
-                min={1}
-                placeholder="1"
-                value={cardValue}
-                onChange={(e: any) => setCardValue(Number(e.target.value))}
-              />
+              <input type="number" name="" id="" min={1} value={cardValue} />
+              {cardValue <= 1 ? (
+                <button className="minus">-</button>
+              ) : (
+                <button
+                  className="plus"
+                  onClick={() => setCardValue(Number(cardValue - 1))}
+                >
+                  -
+                </button>
+              )}
+              <button
+                className="plus"
+                onClick={() => setCardValue(Number(cardValue + 1))}
+              >
+                +
+              </button>
             </div>
 
             <Button

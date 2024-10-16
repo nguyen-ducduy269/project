@@ -141,12 +141,34 @@ export const Product = styled.div`
 
         .form {
           display: flex;
-          gap: 10px;
+          gap: 5px;
           align-items: center;
           input {
             width: 120px;
             height: 50px;
             padding-left: 10px;
+          }
+
+          .minus {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(209, 213, 219);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+          }
+
+          .plus {
+            width: 50px;
+            height: 50px;
+            background-color: #5d6b82;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
           }
         }
 
@@ -195,6 +217,11 @@ export const Product = styled.div`
 
         .summary {
           width: 100%;
+          .form {
+            label {
+              width: 30%;
+            }
+          }
         }
       }
     }
@@ -221,12 +248,23 @@ export const Product = styled.div`
         }
       }
 
-      .detail-information {
-        width: 100%;
-      }
+      .content {
+        .detail-information {
+          width: 100%;
+        }
 
-      .summary {
-        width: 100%;
+        .summary {
+          width: 100%;
+          .form {
+            label {
+              width: 25%;
+            }
+
+            input {
+              width: 50%;
+            }
+          }
+        }
       }
     }
   }
@@ -248,12 +286,23 @@ export const Product = styled.div`
         }
       }
 
-      .detail-information {
-        width: 100%;
-      }
+      .content {
+        .detail-information {
+          width: 100%;
+        }
 
-      .summary {
-        width: 100%;
+        .summary {
+          width: 100%;
+          .form {
+            label {
+              width: 25%;
+            }
+
+            input {
+              width: 55%;
+            }
+          }
+        }
       }
     }
   }
@@ -272,6 +321,61 @@ export const Product = styled.div`
             .active {
               padding: 7px 7px 7px;
               margin-right: 5px;
+            }
+          }
+
+          .form {
+            label {
+              width: 30%;
+            }
+
+            input {
+              width: 40%;
+              height: 40px;
+            }
+
+            .plus,
+            .minus {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .main-content {
+      .content {
+        flex-direction: row;
+        .summary {
+          .pot_style {
+            button {
+              padding: 7px 7px 7px;
+              margin-right: 5px;
+            }
+
+            .active {
+              padding: 7px 7px 7px;
+              margin-right: 5px;
+            }
+          }
+
+          .form {
+            label {
+              width: 20%;
+            }
+
+            input {
+              width: 50%;
+              height: 50px;
+            }
+
+            .plus,
+            .minus {
+              width: 50px;
+              height: 50px;
             }
           }
         }
@@ -360,12 +464,22 @@ export const Product = styled.div`
 
           .form {
             display: flex;
-            gap: 10px;
+            gap: 5px;
             align-items: center;
+            label {
+              width: 30%;
+              font-size: 14px;
+            }
+
             input {
-              width: 120px;
-              height: 50px;
-              padding-left: 10px;
+              width: 30%;
+              height: 40px;
+            }
+
+            .plus,
+            .minus {
+              width: 40px;
+              height: 40px;
             }
           }
 
@@ -472,10 +586,140 @@ export const Product = styled.div`
             display: flex;
             gap: 10px;
             align-items: center;
+            label {
+              width: 25%;
+              font-size: 15px;
+            }
+
             input {
-              width: 120px;
-              height: 50px;
-              padding-left: 10px;
+              width: 27%;
+              height: 40px;
+            }
+
+            .plus,
+            .minus {
+              width: 40px;
+              height: 40px;
+            }
+          }
+
+          a {
+            width: 100%;
+            text-align: center;
+            text-decoration: unset;
+            color: #f8ba8c;
+          }
+
+          .internet-contact {
+            display: flex;
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .main-content {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      justify-content: center;
+      .main-img {
+        width: 472px;
+        height: fit-content;
+        .more-img {
+          margin-top: 10px;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 10px;
+          img {
+            width: 100%;
+            height: 90px;
+          }
+        }
+      }
+
+      .content {
+        .detail-information {
+          width: 500px;
+          .stars {
+            margin-bottom: 15px;
+            svg {
+              font-size: 26px;
+              color: #00634b;
+            }
+          }
+
+          .price {
+            font-size: 20px;
+            font-weight: 500;
+            color: #00634b;
+          }
+
+          ul {
+            margin-top: 30px;
+            padding: 0px 15px 0px;
+            li {
+              margin-top: 20px;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 25px;
+            }
+          }
+        }
+
+        .summary {
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          h4 {
+            font-size: 14px;
+          }
+
+          .select-size {
+            display: flex;
+            gap: 5px;
+            button {
+              width: 60px;
+              height: 33px;
+              border: 0.5px solid #8080805e;
+              border-radius: 5px;
+            }
+
+            .active {
+              color: #f8ba8c;
+              background-color: #f8ba8c0f;
+              border-color: #f8ba8c0f;
+            }
+          }
+
+          div {
+            p {
+              font-size: 12px;
+              font-weight: 600;
+            }
+          }
+
+          .form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            label {
+              width: 30%;
+              font-size: 18px;
+            }
+
+            input {
+              width: 33%;
+              height: 40px;
+            }
+
+            .plus,
+            .minus {
+              width: 40px;
+              height: 40px;
             }
           }
 

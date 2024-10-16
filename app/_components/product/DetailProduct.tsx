@@ -330,15 +330,23 @@ const DetailProduct = (props: Props) => {
 
               <div className="form">
                 <label htmlFor="">Quantity</label>
-                <input
-                  type="number"
-                  name=""
-                  id=""
-                  min={1}
-                  placeholder="1"
-                  value={quantity}
-                  onChange={(e: any) => setQuantity(Number(e.target.value))}
-                />
+                <input type="number" name="" id="" min={1} value={quantity} />
+                {quantity <= 1 ? (
+                  <button className="minus">-</button>
+                ) : (
+                  <button
+                    className="plus"
+                    onClick={() => setQuantity(Number(quantity - 1))}
+                  >
+                    -
+                  </button>
+                )}
+                <button
+                  className="plus"
+                  onClick={() => setQuantity(Number(quantity + 1))}
+                >
+                  +
+                </button>
               </div>
 
               {product.sold_out == true ? (

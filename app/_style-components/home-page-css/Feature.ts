@@ -39,13 +39,37 @@ export const Feature = styled.div`
       .form-field-select {
         display: flex;
         gap: 5px;
+        align-items: center;
         label {
           font-size: 18px;
         }
         input {
           width: 120px;
           font-size: 14px;
+          height: 30px;
           padding-left: 5px;
+        }
+
+        .minus {
+          width: 30px;
+          height: 30px;
+          background-color: rgb(209, 213, 219);
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 20px;
+          cursor: pointer;
+        }
+
+        .plus {
+          width: 30px;
+          height: 30px;
+          background-color: #5d6b82;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 20px;
+          cursor: pointer;
         }
       }
 
