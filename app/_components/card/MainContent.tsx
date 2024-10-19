@@ -47,7 +47,7 @@ const MainContent = (props: Props) => {
       <Container>
         <div className="main-content">
           <div className="title">
-            <h1>Your Cart</h1>
+            <h1>Your Card</h1>
 
             {data.length > 0 ? (
               <div className="subtotal">
